@@ -25,3 +25,24 @@ x = np.array([
     1,2,3,4,5,6
 ])
 print(x.reshape(2,3))
+
+#Boolean Masking
+import numpy as np
+
+ic50 = np.array([10,45,8,20])
+print(ic50<20)
+print(ic50[ic50 < 20])
+#feature matrix and target vector 
+X = np.array([
+    [300,2.1,1],
+    [450,4.5,0],
+    [250,1.8,2]
+])
+
+y = np.array([
+    1,
+    0,
+    1
+])
+print(y.shape)#answers
+print(x.shape)#features
