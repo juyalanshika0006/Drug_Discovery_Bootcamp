@@ -55,3 +55,15 @@ df=pd.DataFrame(
 #show Results
 print("\n Descriptor Table:\n")
 print(df)
+
+
+# using the feature of Morganfingerprinting
+from rdkit.Chem import rdFingerprintGenerator
+mol=Chem.MolFromSmiles("CCO")
+fpgen=rdFingerprintGenerator.GetMorganGenerator(
+    radius=2,
+    fpSize=1024
+)
+fp=fpgen.GetFingerprint(mol)
+fp_list=list(fp)
+print(fp_list[:100])
